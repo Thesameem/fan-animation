@@ -4,7 +4,8 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Fan Animation</title>
-
+      <link rel="stylesheet" href="style1.css">
+      <script src="script1.js" defer></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
@@ -20,100 +21,5 @@
                   <li data-name="three" id="three">3</li>
             </ul>
       </div>
-
-      <style>
-
-            .fan {
-                  animation-name: fan;
-                  animation-timing-function: linear;
-                  animation-iteration-count: infinite;
-            }
-
-            ul.buttons {    display: flex;
-                              gap: 15px;
-                              list-style-type: none;}
-
-            ul.buttons li {
-                  padding: 5px 15px;
-                  border: 1px solid #d3d3d3;
-                  border-radius: 5px;
-                  font-size: 10pt;
-                  cursor: pointer;
-                  background-color: #f5f5f5;
-                  font-weight: bolder;
-                  color: #1277d4;
-            }
-
-            .one {
-                  animation-duration: 1s;
-            }
-
-            .two {
-                  animation-duration: 0.5s;
-            }
-
-            .three {
-                  animation-duration: 0.2s;
-            }
-
-            .stop {
-                  /* animation-duration: 0; */
-                  animation-play-state: paused;
-            }
-
-            @keyframes fan {
-                  from {
-                        transform: rotate(0deg);
-                  }
-
-                  to {
-                        transform: rotate(360deg);
-                  }
-            }
-
-      </style>
-
-      
-
-<script>
-      
-      let stopFan = document.getElementById('stop');
-      let one = document.getElementById('one');
-      let two = document.getElementById('two');
-      let three = document.getElementById('three');
-
-      let fan = document.getElementById('fan');
-
-      one.onclick = function () {
-            fan.classList.remove('two');
-            fan.classList.remove('three');
-            fan.classList.remove('stop');
-            fan.classList.add('one');
-      }
-
-      two.onclick = function () {
-            fan.classList.remove('one');
-            fan.classList.remove('three');
-            fan.classList.remove('stop');
-            fan.classList.add('two');
-      }
-
-      three.onclick = function () {
-            fan.classList.remove('one');
-            fan.classList.remove('two');
-            fan.classList.remove('stop');
-            fan.classList.add('three');
-      }
-
-      stopFan.onclick = function () {
-            fan.classList.remove('one');
-            fan.classList.remove('two');
-            fan.classList.remove('three');
-            fan.classList.add('stop');
-      }
-
-</script>
-
-
 </body>
 </html>
